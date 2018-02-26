@@ -22,5 +22,12 @@ public class PTra02_10 {
 		 * ※ プログラムは何行書いても良いです
 		 */
 
+		double zei = 1.08;
+
+		double moneyInHand1;
+		moneyInHand1 = moneyInHand - (coffee * 2 + snack * 1) * zei;
+
+		int moneyInHand2 = (int)moneyInHand1;
+		System.out.println(moneyInHand2);
 	}
 }
