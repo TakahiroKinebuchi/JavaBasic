@@ -11,12 +11,21 @@ public class PTra02_01 {
 
 		// ★ 20を5で割った値を出力してください
 
+		int a = 20;
+		int b = 5;
+		System.out.println(a/b);
 
 		// ★ 126に13を掛けた値を出力してください
 
+		int c = 126;
+		int d = 13;
+		System.out.println(c*d);
 
 		// ★ 97を6で割ったときの余りを出力してください
 
+		int e = 97;
+		int f = 6;
+		System.out.println(e%f);
 
 	}
 }
