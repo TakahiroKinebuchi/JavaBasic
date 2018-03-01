@@ -48,7 +48,7 @@ public class PTra04_05 {
 				System.out.println("グー！");
 
 				if(myHand == 2){
-					break;
+					winFlg = true;
 				}
 
 
@@ -56,7 +56,7 @@ public class PTra04_05 {
 				System.out.println("チョキ！！");
 
 				if(myHand == 0) {
-					break;
+					winFlg = true;
 				}
 
 
@@ -65,7 +65,7 @@ public class PTra04_05 {
 				System.out.println("パー！！");
 
 				if(myHand == 1) {
-					break;
+					winFlg = true;
 				}
 
 
