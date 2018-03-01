@@ -20,5 +20,13 @@ public class PTra06_05 {
 		 * ■■■■■
 		 */
 
+		for(int i = 1; i <= 25; i++) {//i=1 ～ i=25までiに1足していく
+			System.out.print("■");
+
+			//5個ごとに改行する
+			if(i%5 == 0) {
+				System.out.println();
+			}
+		}
 	}
 }
