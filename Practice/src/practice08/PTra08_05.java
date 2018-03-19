@@ -35,10 +35,10 @@ public class PTra08_05 {
 
 		switch(choice) {
 		case 1:
-			System.out.println("四角形" + quadrangle(width,height));
+			System.out.println("四角形の面積：" + quadrangle(width,height));
 			break;
 		case 2:
-			System.out.println("三角形" + triangle(width,height));
+			System.out.println("三角形の面積：" + triangle(width,height));
 			break;
 		default:
 			System.out.println("図形を選択してください！");
