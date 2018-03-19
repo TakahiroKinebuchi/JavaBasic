@@ -11,8 +11,7 @@ public class PTra04_02 {
 		// 通称「FizzBuzz問題」です
 		// ★ int型の変数indexを定義し、1で初期化してください
 
-		int index;
-		index = 1;
+		int index = 1;
 
 
 		// ★ 変数indexが100以下である場合繰り返す条件式を記述してください
@@ -22,28 +21,28 @@ public class PTra04_02 {
 
 			if(index%3 == 0 && index%5 == 0) {
 				System.out.println("FizzBuzz");
-			}
+
 
 			// ★ 変数indexの値が3で割り切れ、5で割り切れない場合は、「Fizz」と出力
 
-			if(index%3 == 0 && index%5 == 1) {
+			}else if(index%3 == 0) {
 				System.out.println("Fizz");
-			}
+
 
 			// ★ 変数indexの値が5で割り切れ、3で割り切れない場合は、「Buzz」と出力
-			if(index%5 == 0 && index%3 == 1) {
+			}else if(index%5 == 0) {
 				System.out.println("Buzz");
-			}
+
 
 			// ★ 変数indexの値が3でも5でも割り切れない場合は、変数indexの値を出力
-			if(index%3 == 1 && index%5 == 1) {
+			}else {
 				System.out.println(index);
 			}
 
 
 			// ★ 変数indexに1を加算した数を、変数indexに代入する
 
-			index += 1;
+			index++;
 
 
 		}
