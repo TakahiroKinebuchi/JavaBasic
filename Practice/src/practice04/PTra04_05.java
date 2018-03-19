@@ -25,9 +25,17 @@ public class PTra04_05 {
 			// コマンドプロンプトで入力した文字列が変数lineに代入されます
 			String line = scanner.nextLine();
 
+
 			// 文字列を数字に変換して、変数numに代入します
 			// ※ コマンドプロンプトで入力された値が、数字ではなかった場合はプログラムがエラーになり、プログラムが終了します
 			int myHand = Integer.parseInt(line);
+			if(myHand == 0) {
+				System.out.println("あなたの手はグー！");
+			}else if(myHand == 1) {
+				System.out.println("あなたの手はチョキ！");
+			}else {
+				System.out.println("あなたの手はパー！");
+			}
 
 			System.out.print("相手の手は・・・・・");
 
@@ -45,10 +53,15 @@ public class PTra04_05 {
 			 * ※ プログラムは何行書いても良いです
 			 */
 			if (cpuHand == 0) {
-				System.out.println("グー！");
+				System.out.println("グー！！");
 
 				if(myHand == 2){
+					System.out.println("あなたの勝ち！終わり！");
 					winFlg = true;
+				}else if(myHand == 0){
+					System.out.println("あいこ！もう一勝負！");
+				}else {
+					System.out.println("負け！もう一勝負！");
 				}
 
 
@@ -56,7 +69,12 @@ public class PTra04_05 {
 				System.out.println("チョキ！！");
 
 				if(myHand == 0) {
+					System.out.println("あなたの勝ち！終わり！");
 					winFlg = true;
+				}else if(myHand == 1) {
+					System.out.println("あいこ！もう一勝負！");
+				}else {
+					System.out.println("負け！もう一勝負！");
 				}
 
 
@@ -65,7 +83,12 @@ public class PTra04_05 {
 				System.out.println("パー！！");
 
 				if(myHand == 1) {
+					System.out.println("あなたの勝ち！終わり！");
 					winFlg = true;
+				}else if(myHand == 0) {
+					System.out.println("負け！もう一勝負！");
+				}else {
+					System.out.println("あいこ！もう一勝負！");
 				}
 
 
