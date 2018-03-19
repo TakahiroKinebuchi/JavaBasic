@@ -50,7 +50,7 @@ public class PTra03_08 {
 			System.out.println("1-3を選択してください");
 		}
 
-		System.out.println(money);
+		System.out.println("所持金" + money + "円");
 
 		}
 }
