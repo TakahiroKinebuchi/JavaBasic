@@ -15,13 +15,18 @@ public class PTra09_02 {
 		// ★ 配列arrayを、Util内のメソッドを用いてランダムに並び替えてください
 		// ※ Utilはインポートしても良いし、完全限定名で記述しても良いです
 
-		Util.shuffleArray(array);
+		String[] nextRamdom = Util.shuffleArray(array);
 
 		// ★ ランダムに並び替えた後の配列を前から順に全て表示してください
 
 
-		for(int i = 0; i < array.length; i++) {//要素の数だけ繰り返す
-		System.out.println(array[i]);
+		//for(int i = 0; i < array.length; i++) {//要素の数だけ繰り返す
+		//System.out.println(array[i]);
+		//}
+		//これでもいいけど・・・並び替えた後の配列の数って考え方がほしいので・・・
+
+		for(String str:nextRamdom) {
+			System.out.println(str);
 		}
 	}
 }
