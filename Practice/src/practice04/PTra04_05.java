@@ -33,8 +33,10 @@ public class PTra04_05 {
 				System.out.println("あなたの手はグー！");
 			}else if(myHand == 1) {
 				System.out.println("あなたの手はチョキ！");
-			}else {
+			}else if(myHand == 2){
 				System.out.println("あなたの手はパー！");
+			}else {
+				System.out.println("こんなゲームにマジになっちゃってどうするの？？");
 			}
 
 			System.out.print("相手の手は・・・・・");
@@ -60,8 +62,10 @@ public class PTra04_05 {
 					winFlg = true;
 				}else if(myHand == 0){
 					System.out.println("あいこ！もう一勝負！");
-				}else {
+				}else if(myHand == 1){
 					System.out.println("負け！もう一勝負！");
+				}else {
+					System.out.println("判定できない！やり直し！");
 				}
 
 
@@ -73,8 +77,10 @@ public class PTra04_05 {
 					winFlg = true;
 				}else if(myHand == 1) {
 					System.out.println("あいこ！もう一勝負！");
-				}else {
+				}else if(myHand == 2){
 					System.out.println("負け！もう一勝負！");
+				}else {
+					System.out.println("判定できない！やり直し！");
 				}
 
 
@@ -87,8 +93,10 @@ public class PTra04_05 {
 					winFlg = true;
 				}else if(myHand == 0) {
 					System.out.println("負け！もう一勝負！");
-				}else {
+				}else if(myHand == 2){
 					System.out.println("あいこ！もう一勝負！");
+				}else {
+					System.out.println("判定できない！やり直し！");
 				}
 
 
