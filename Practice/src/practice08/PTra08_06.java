@@ -31,19 +31,19 @@ public class PTra08_06 {
 
 	// ★ dispValueを引数intでオーバーロードしてください。処理は同じ
 
-	public static void dispValue(int message) {
-		System.out.println("「" + message + "」");
+	public static void dispValue(int numbers) {
+		System.out.println("「" + numbers + "」");
 	}
 
 	// ★ dispValueを引数doubleでオーバーロードしてください。処理は同じ
 
-	public static void dispValue(double message) {
-		System.out.println("「" + message + "」");
+	public static void dispValue(double numbersAll) {
+		System.out.println("「" + numbersAll + "」");
 	}
 
 	// ★ dispValueを引数charでオーバーロードしてください。処理は同じ
 
-	public static void dispValue(char message) {
-		System.out.println("「" + message + "」");
+	public static void dispValue(char ichi) {
+		System.out.println("「" + ichi + "」");
 	}
 }
