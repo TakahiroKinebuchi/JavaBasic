@@ -11,16 +11,25 @@ public class PTra07_06 {
 
 		// ★ ※2次元配列を用いています
 		int[][] array = {
-				{500,40,6},
-				{70,8,90,1000}
+				{500,40,6},		//0列目
+				{70,8,90,1000}	//1列目
 		};
 
 		// ★ 配列arrayに格納されている全ての数字の平均を出力してください
 
-		double sum = array[0][0] + array[0][1] + array[0][2] + array[1][0] + array[1][1] + array[1][2] + array[1][3];
+		double sum = 0;
+		int index = 0;
 
-		System.out.println(sum/array.length);
+		for(int i = 0;i < array.length;i++) {			//iが列
+			for(int j = 0;j < array[i].length;j++) {	//jが各配列番号
+				sum += array[i][j];
+				index++;
+			}
+		}
 
+		System.out.println("合計値：" + sum);
+		System.out.println("値数：" + index);
+		System.out.println("平均値：" + sum/index);
 
 	}
 }
