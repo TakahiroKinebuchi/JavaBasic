@@ -12,7 +12,7 @@ public class PTra05_04 {
 		// 下記の命令は、入力型プログラムで必要な記述になります。
 		java.util.Scanner scanner = new java.util.Scanner(System.in);
 
-		boolean iscontinue = true;
+		boolean isContinue = true;
 
 		/*
 		 * 以下のプログラムは未完成です。
@@ -26,38 +26,40 @@ public class PTra05_04 {
 
 		// ①
 
-		while(iscontinue) {
+		while(isContinue) {
 		System.out.println("0～6の整数を入力してください");
 
 
 		String line = scanner.nextLine();
-
 		int line1 = Integer.parseInt(line);
+		isContinue = false;
 
 		switch(line1) {
 			case 0:
 				System.out.println("日曜");
-				iscontinue = false;
+				break;
 			case 1:
 				System.out.println("月曜");
-				iscontinue = false;
+				break;
 			case 2:
 				System.out.println("火曜");
-				iscontinue = false;
+				break;
 			case 3:
 				System.out.println("水曜");
-				iscontinue = false;
+				break;
 			case 4:
 				System.out.println("木曜");
-				iscontinue = false;
+				break;
 			case 5:
 				System.out.println("金曜");
-				iscontinue = false;
+				break;
 			case 6:
 				System.out.println("土曜");
-				iscontinue = false;
+				break;
 			default:
-		}
+				System.out.println("正しい値を入力して下さい。");
+				isContinue = true;
+			}
 		}
 
 	}
