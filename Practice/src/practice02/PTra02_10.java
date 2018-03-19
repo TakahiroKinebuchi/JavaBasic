@@ -22,12 +22,16 @@ public class PTra02_10 {
 		 * ※ プログラムは何行書いても良いです
 		 */
 
-		double zei = 1.08;
+		double zei = 0.08;
+		int total = coffee * 2 + snack;//合計金額120*2 + 200 = 440円
+		double tax = total * zei;		//消費税440*0.08 =  35.2円
 
-		double moneyInHand1;
-		moneyInHand1 = moneyInHand - (coffee * 2 + snack * 1) * zei;
+		int taxTruncation = (int)tax;	//消費税（少数切り捨て）35円
+		int moneyInHand1;				//買った後の所持金
+		moneyInHand1 = moneyInHand - (total + taxTruncation);//1000 - (440 + 35) = 525円
 
-		int moneyInHand2 = (int)moneyInHand1;
-		System.out.println(moneyInHand2);
+
+
+		System.out.println("買った後の所持金：" + moneyInHand1 + "円");//買った後の所持金525円
 	}
 }
