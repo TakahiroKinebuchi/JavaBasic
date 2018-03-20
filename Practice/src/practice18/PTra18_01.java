@@ -15,9 +15,7 @@ public class PTra18_01 {
 	public static void main(String[] args) {
 
 	    // file/BestElevenCandidate.csv に記述された文字列を1行毎に line に代入します。
-
         ArrayList<String> array = new ArrayList<String>();
-
         try(Scanner scanner = new Scanner(new File("file/BestElevenCandidate.csv"))) {
 
             while (scanner.hasNext()) {
@@ -34,7 +32,7 @@ public class PTra18_01 {
 		// ※ できれば拡張for文を使いましょう
 
         for(String members:array) {
-        	System.out.println(members);
+        	System.out.println(members.replaceAll(",", "\t"));
         }
 	}
 }

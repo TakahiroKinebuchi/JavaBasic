@@ -22,11 +22,12 @@ public class PTra17_04 {
 		//配列数を取得
 		int arr_num = data.length;
 
-		//i = 0 ~ i = 12 の間繰り返しを行う。ex.data[0] = "ス"・・・以下同様
-		for(int i = 0;i <= arr_num-1; i++) {
+		//i = 0 ~ i = 12(i < data.lengthとすることで、できる) の間繰り返しを行う。ex.data[0] = "ス"・・・以下同様
+		for(int i = 0;i < arr_num; i++) {
 			try {
 				Thread.sleep(1000);//10秒間眠るThread.sleep(millisecond)
 			}catch(InterruptedException e) {
+				//例外が発生しても、もみ消す
 			}
 			System.out.print(data[i]);
 		}
