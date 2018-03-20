@@ -44,7 +44,18 @@ public class Player {
 
 		//オーバーライド
 		public String toString() {
-			return this.position + "," + this.name + "," + this.country + "," + this.team;
+			final String SEP = ",";
+
+			StringBuilder str = new StringBuilder();
+			str.append(this.position);
+			str.append(SEP);
+			str.append(this.name);
+			str.append(SEP);
+			str.append(this.country);
+			str.append(SEP);
+			str.append(this.team);
+
+			return str.toString();
 		}
 
 
