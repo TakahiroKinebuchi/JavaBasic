@@ -43,7 +43,7 @@ public class PTra10_05 {
 		car.gasoline = 50;
 
 		// 目的地までの距離
-		int distance = 300;
+		final int distance = 300;
 
 		/*
 		 * ★ 変数carに格納されているインスタンスメソッドrunを使って、目的地まで進んでください
@@ -52,20 +52,25 @@ public class PTra10_05 {
 		 * ※n：runメソッドを実行した回数, xは残りのガソリンの数です
 		 */
 
+		int move = 0;
 		int count = 0;
-		while(true) {
-			distance -= car.run();
-			count += 1;
-
-			if(car.gasoline < 0) {
-				System.out.println("目的地に到達できませんでした");
+		while(distance - move > 0) {
+			int ret = car.run();
+			if(ret == -1) {
 				break;
 			}
+			move += ret;
+			count++;
 
-			if(distance <= 0) {
+			//表示用
+			int disp = (distance - move) < 0 ? 0 : distance - move;//三項演算子→条件式 ? 式1 : 式2→if文と意味は同じで、trueは式1になり、falseは式2になる
+			System.out.println((count) + "時間で" + ret + "km進みました。残り：" + disp + "km");
+			System.out.println();
+		}
+			if(distance - move > 0) {
+				System.out.println("目的地に到達できませんでした。");
+			}else {
 				System.out.println("目的地にまで" + count + "時間かかりました。残りのガソリンは、" + car.gasoline + "リットルです");
-				break;
 			}
 		}
-	}
 }

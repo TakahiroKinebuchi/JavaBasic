@@ -7,9 +7,9 @@ public class Car {
 	int gasoline;
 
 	int run() {
-		if(this.gasoline > 0) {
-		this.gasoline -= 1;
-		return new java.util.Random().nextInt(15);
+		if(gasoline > 0) {
+		gasoline--;
+		return new java.util.Random().nextInt(15)+1;
 
 		}else {
 		return -1;
