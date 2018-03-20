@@ -13,7 +13,7 @@ public class PTra16_01 {
         */
 
     	Date date = new Date();
-    	SimpleDateFormat f = new SimpleDateFormat("YYYY年MM月DD日");
+    	SimpleDateFormat f = new SimpleDateFormat("yyyy年MM月dd日");
     	String dateStr = f.format(date);
     	System.out.println(dateStr);
     }
