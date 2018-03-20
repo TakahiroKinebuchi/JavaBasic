@@ -9,7 +9,6 @@ package practice18;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Scanner;
 
 import practice18.entity.Player;
@@ -53,15 +52,22 @@ public class PTra18_03 {
 
 		//arrayの中にある各list、1つ1つチェックして"レアル・マドリード"か"バルセロナ"がequals(String)だったら、除外
 
-		Iterator<Player> i = array.iterator();
+		/*Iterator<Player> i = array.iterator();
 		while (i.hasNext()) {
 			Player members = i.next();
-
 			if (members.getTeam().equals("レアル・マドリード") || members.getTeam().equals("バルセロナ")) {
 				i.remove();
 			}
 		}
+		*/
 
+		for(int i = array.size()-1; 0 < i;i--) {
+			Player player = array.get(i);
+			String team = player.getTeam();
+			if("レアル・マドリード".equals(team) || "バルセロナ".equals(team)) {
+				array.remove(i);
+			}
+		}
 		// ★ 削除後のArrayListの中身を全件出力してください
 
 		for (Player toString : array) {
