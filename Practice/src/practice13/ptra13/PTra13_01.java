@@ -17,20 +17,15 @@ public class PTra13_01 extends Animal{
 	public static void main(String[] args) {
 
 		// ★ PTra13_01をインスタンス化をしてください
-
-		PTra13_01 PTra13_01 = new PTra13_01();
+		PTra13_01 ptra = new PTra13_01();
 
 		// ★ PTra13_01の持つsetterを実行してください（引数："人"）
-
-		PTra13_01.setName("人");
-
-		System.out.println(PTra13_01.getName());
+		ptra.setName("人");
+		System.out.println(ptra.getName());
 
 		// ★ PTra13_01の持つインスタンスメソッドrunとbreathを実行してしてください
-
-		PTra13_01.run();
-
-		PTra13_01.breath();
+		ptra.run();
+		ptra.breath();
 
 
 	}
