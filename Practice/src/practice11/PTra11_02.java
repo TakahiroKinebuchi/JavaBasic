@@ -1,17 +1,16 @@
 package practice11;
 
+import java.util.Scanner;
+
 public class PTra11_02 {
 	public static void main(String[] args) {
 
 		// ★ ReadFileClassのクラスメソッドreadBookDataFile()を使い、本情報を取得します
 
 		Book[] bookData = FileReaderClass.readBookDataFile();
-
-
-
 		// 入力型プログラムです。
 		// 下記の命令は、入力型プログラムで必要な記述になります。
-		java.util.Scanner scanner = new java.util.Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("探したい本のタイトル（又はその一部）を入力してください");
 
@@ -23,18 +22,8 @@ public class PTra11_02 {
 		for(int i = 0;i < bookData.length;i++) {
 			if(bookData[i].title.indexOf(line)!=-1) {
 				System.out.println(bookData[i].dispBookInfo());
+				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 			}
-
-
 		}
-
-//		if(Arrays.asList(bookData).contains(line)) {
-//			System.out.println(bookData);
-//		}else {
-//			System.out.println("再検索してください");
-//		}
-
-
-
 	}
 }
