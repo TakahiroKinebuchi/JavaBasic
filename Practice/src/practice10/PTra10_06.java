@@ -6,6 +6,7 @@ package practice10;
  * Copyright(c) Rhizome Inc. All Rights Reserved.
  */
 
+import java.util.Scanner;
 public class PTra10_06 {
 
 	/*
@@ -19,72 +20,51 @@ public class PTra10_06 {
 		 * 各carインスタンスのrunメソッドを実行して、それぞれ「目的地にまでn時間かかりました。残りのガソリンは、xリットルです」を出力してください。
 		 */
 
-		Car car = new Car();
-		Car car1 = new Car();
-		Car car2 = new Car();
+		//車の製造
+		Scanner scanner = new Scanner(System.in);
+		Car[] car = new Car[3];
 
-		car.color = "Red";
-		car1.color = "Blue";
-		car2.color = "Green";
+		for(int i = 0;i < car.length;i++) {
+			System.out.println("----------------------------------------------------------------------");
+			System.out.println((i+1) + "台目");
+			car[i] = new Car();
 
-		car.gasoline = 50;
-		car1.gasoline = 60;
-		car2.gasoline = 70;
+			System.out.println("シリアルナンバー（5桁の数字）、車体カラー、ガソリン量（2桁の数字）をカンマ区切りで入力して下さい。");
+			String line = scanner.nextLine();
 
-		//目的地までの距離
+			String[] inputInfo = line.split(",",0);
+
+			car[i].serialNo = Integer.parseInt(inputInfo[0]);
+			car[i].color = inputInfo[1];
+			car[i].gasoline = Integer.parseInt(inputInfo[2]);
+		}
+
+		//それぞれの車を走らせる
 		int distance = 300;
-		int distance1 = 300;
-		int distance2 = 300;
+		int[] count = new int[car.length];
 
-		int count = 0;
-		while(true) {
-			distance -= car.run();
-			count += 1;
-
-			if(car.gasoline < 0) {
-				System.out.println("目的地に到達できませんでした");
-				break;
-			}
-
-			if(distance <= 0) {
-				System.out.println("目的地にまで" + count + "時間かかりました。残りのガソリンは、" + car.gasoline + "リットルです");
-				break;
+		for(int i = 0;i < car.length;i++) {
+			int move = 0;
+			while(distance - move > 0) {
+				int ret = car[i].run();
+				if(ret == -1) {
+					count[i] = -1;
+					break;
+				}
+				move += ret;
+				count[i]++;
 			}
 		}
 
-
-		int count1 = 0;
-		while(true) {
-			distance1 -= car1.run();
-			count1 += 1;
-
-			if(car1.gasoline < 0) {
-				System.out.println("目的地に到達できませんでした");
-				break;
-			}
-
-			if(distance1 <= 0) {
-				System.out.println("目的地にまで" + count1 + "時間かかりました。残りのガソリンは、" + car1.gasoline + "リットルです");
-				break;
+		//出力
+		for(int i = 0;i < count.length;i++) {
+			if(count[i] == -1) {
+				System.out.println("目的地に到達できませんでした。");
+			}else {
+				System.out.println((i+1) + "台目は目的地にまで" + count[i] + "時間かかりました。残りのガソリンは、" + car[i].gasoline + "リットルです。");
 			}
 		}
 
-
-		int count2 = 0;
-		while(true) {
-			distance2 -= car2.run();
-			count2 += 1;
-
-			if(car2.gasoline < 0) {
-				System.out.println("目的地に到達できませんでした");
-				break;
-			}
-
-			if(distance2 <= 0) {
-				System.out.println("目的地にまで" + count2 + "時間かかりました。残りのガソリンは、" + car2.gasoline + "リットルです");
-				break;
-			}
-		}
 
 
 	}
