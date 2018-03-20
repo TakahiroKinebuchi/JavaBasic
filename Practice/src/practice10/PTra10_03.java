@@ -6,6 +6,7 @@ package practice10;
  * Copyright(c) Rhizome Inc. All Rights Reserved.
  */
 
+import java.util.Scanner;
 public class PTra10_03 {
 
 	/*
@@ -25,7 +26,7 @@ public class PTra10_03 {
 
 		// ★ java.util.Scannerクラスをインスタンス化し、変数scannerに代入してください
 
-		java.util.Scanner scanner = new java.util.Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("ユーザID（数字）、ユーザ名、メールアドレス、パスワードをカンマ区切りで入力して下さい。");
 
 		// ★ 入力された値を、String型の変数lineに格納してください
